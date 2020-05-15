@@ -1,0 +1,32 @@
+{
+  "name": "YouTube to mp3 client",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "POST youtube video id to a server for downloading as mp3",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "page_action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html"
+}
