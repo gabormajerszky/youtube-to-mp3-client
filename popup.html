@@ -5,10 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YouTube to mp3</title>
+  <script src="popup.js"></script>
+  <style>
+    html {
+      width: 400px;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+    }
+  </style>
 </head>
 
 <body>
-  <p>Download</p>
+  <input id="titleInput" type="text">
+  <button id="downloadButton">Download</button>
+  <div id="statusDiv"></div>
 </body>
 
 </html>
