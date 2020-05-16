@@ -24,6 +24,11 @@ function onDownload() {
             statusDiv.innerText = 'Download finished';
           }
         }
+        xhr.onerror = function (event) {
+          if (event.type === 'error') {
+            statusDiv.innerText = 'Download failed';
+          }
+        }
         xhr.open('POST', 'https://maniacfish.com:8443/getmp3', true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify({
